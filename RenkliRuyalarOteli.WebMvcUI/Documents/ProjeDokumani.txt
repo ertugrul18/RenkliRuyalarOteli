@@ -1,0 +1,3 @@
+﻿Authentication icin 
+Microsoft.AspNetCore.Authentication.Cookies 
+pakati Cookie Base Kimlik Dogrulamam icin indirildi.

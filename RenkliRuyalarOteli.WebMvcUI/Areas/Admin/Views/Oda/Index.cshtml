@@ -1,0 +1,38 @@
+﻿@model List<Oda>
+<a asp-action="Create" asp-controller="Oda" class="btn btn-primary">Yeni Oda</a>
+<div class="card">
+    <div class="card-header">
+        <h3>Odalar</h3>
+    </div>
+    <div class="card-body">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <td>Oda No</td>
+                    <td>Kisi Sayisi</td>
+                    <td>Durum</td>
+                    <td>Kullanıcı Id</td>
+                    <td>Oda Fiyatları</td>
+                    <td>Rezervasyonlari</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (Oda Odalar in Model)
+                {
+                    <tr>
+                        <td>@Odalar.OdaNo</td>
+                        <td>@Odalar.KisiSayisi</td>
+                        <td>@Odalar.Durum</td>
+                        <td>@Odalar.KullaniciId</td>
+                        <td>@Odalar.OdaFiyatlari</td>
+                        <td>@Odalar.Rezervasyonlari</td>
+                        <td><a asp-action="Update" asp-controller="Odalar" class="btn btn-success" asp-route-Id="@Odalar.Id">Update</a> </td>
+                        <td><a asp-action="Delete" asp-controller="Odalar" class="btn btn-danger" asp-route-Id="@Odalar.Id">Delete</a> </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
