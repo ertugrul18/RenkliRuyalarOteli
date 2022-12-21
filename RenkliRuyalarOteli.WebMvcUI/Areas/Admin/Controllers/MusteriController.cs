@@ -106,5 +106,20 @@ namespace RenkliRuyalarOteli.WebMvcUI.Areas.Admin.Controllers
                 return View(createDTO);
             }
         }
+        //public void Delete(Guid Id)
+        //{
+        //    Musteri musterii = musteriManager.FindAllAsnyc(p => p.Id == Id);
+        //    musteriManager.DeleteAsync(musterii);
+        //}
+        //public ActionResult Delete(Guid id)
+        //{
+
+        //    Musteri SilinecekMusteri = musteriManager.Where().FirstOrDefault();
+        //    return View(SilinecekOgrenci);
+        //}
+
+
+
+
     }
 }
