@@ -7,9 +7,10 @@
         </div>
     </div>
     <div class="card-body">
-        <form asp-action="Create" asp-controller="Odalar" method="post" enctype="multipart/form-data">
+        <form asp-action="Create" asp-controller="Oda" method="post" enctype="multipart/form-data">
             <input type="hidden" asp-for="Id">
-            <div class="input-group mb-3">
+            <label style="vertical-align:sub">Oda No : </label>
+            <div class="input-group mb-3 ">
                 <input type="OdaNo" asp-for="OdaNo" class="form-control" placeholder="OdaNo">
                 <div class="input-group-append">
                     <div class="input-group-text">
@@ -17,7 +18,9 @@
                     </div>
                 </div>
             </div>
+            <label>Kişi sayisi</label>
             <div class="input-group mb-3">
+
                 <input type="text" asp-for="KisiSayisi" class="form-control" placeholder="Kisi Sayisi">
                 <div class="input-group-append">
                     <div class="input-group-text">
@@ -25,7 +28,9 @@
                     </div>
                 </div>
             </div>
+            <label>Durum</label>
             <div class="input-group mb-3">
+
                 <input type="text" asp-for="Durum" class="form-control" placeholder="Durum">
                 <div class="input-group-append">
                     <div class="input-group-text">
@@ -33,7 +38,9 @@
                     </div>
                 </div>
             </div>
+            <label>Kullanici Id</label>
             <div class="input-group mb-3">
+
                 <input type="text" asp-for="KullaniciId" class="form-control" placeholder="Kullanici Adi">
                 <div class="input-group-append">
                     <div class="input-group-text">
@@ -44,31 +51,31 @@
             </div>
 
 
+
+
+            <label>Oda Fiyatlari</label>
+            <input type="text" asp-for="OdaFiyatlari" class="form-control" placeholder="Oda Fiyatlari">
+
+            <div class="input-group-append">
+                <div class="input-group-text">
+                    <span class="fas fa-envelope text-danger" asp-validation-for="OdaFiyatlari"></span>
+                </div>
+            </div>
+
+
+            <label>Rezervasyonlari</label>
+            <input type="text" asp-for="Rezervasyonlari" class="form-control" placeholder="Rezervasyonlari">
+
+            <div class="input-group-append">
+                <div class="input-group-text">
+                    <span class="fas fa-envelope text-danger" asp-validation-for="Rezervasyonlari"></span>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary" value="Kaydet">Kaydet</button>
         </form>
+       
+
     </div>
-    <div class="input-group mb-3">
-        <input type="text" asp-for="OdaFiyatlari" class="form-control" placeholder="Oda Fiyatlari">
-
-        <div class="input-group-append">
-            <div class="input-group-text">
-                <span class="fas fa-envelope text-danger" asp-validation-for="OdaFiyatlari"></span>
-            </div>
-        </div>
-    </div>
-    <div class="input-group mb-3">
-        <input type="text" asp-for="Rezervasyonlari" class="form-control" placeholder="Rezervasyonlari">
-
-        <div class="input-group-append">
-            <div class="input-group-text">
-                <span class="fas fa-envelope text-danger" asp-validation-for="Rezervasyonlari"></span>
-            </div>
-        </div>
-    </div>
-
-
-    <button type="submit" class="btn btn-primary" value="Kaydet">Kaydet</button>
-
-</div>
 </div>
 <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
 <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
